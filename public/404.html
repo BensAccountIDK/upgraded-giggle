@@ -6,10 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Redirecting...</title>
     <script>
-        // Redirect all 404s back to index.html with the path preserved
-        const path = window.location.pathname.replace('/upgraded-giggle/', '');
-        const redirect = '/upgraded-giggle/index.html?' + (path || '');
-        window.location.replace(redirect);
+        // Preserve the pathname when redirecting 404s to index.html
+        // This allows React Router to handle client-side routing
+        const pathname = window.location.pathname;
+        const search = window.location.search;
+        const hash = window.location.hash;
+        
+        // Store the redirect path in sessionStorage so index.html can use it
+        sessionStorage.setItem('redirect', pathname + search + hash);
+        
+        // Redirect to index.html
+        window.location.replace('/upgraded-giggle/');
     </script>
 </head>
 <body>
