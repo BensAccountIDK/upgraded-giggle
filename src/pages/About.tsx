@@ -6,25 +6,25 @@ const About = () => {
       {/* Top Navigation */}
       <nav className="w-full sticky top-0 z-50 bg-transparent font-headline antialiased">
         <div className="flex justify-between items-center px-8 py-5 max-w-[1600px] mx-auto">
-          <a href="/" className="text-2xl font-bold tracking-tight text-primary-foreground">
+          <a href={import.meta.env.BASE_URL} className="text-2xl font-bold tracking-tight text-primary-foreground">
             Pyro Press Publication
           </a>
           <div className="flex items-center gap-4">
             <a
-              href="/about"
+              href={`${import.meta.env.BASE_URL}about`}
               className="w-10 h-10 rounded-full border border-primary-foreground/20 flex items-center justify-center text-primary-foreground/70 hover:text-primary-foreground hover:border-primary-foreground/40 transition-colors"
               aria-label="About"
             >
               <span className="material-symbols-outlined text-xl">info</span>
             </a>
             <a
-              href="/login"
+              href={`${import.meta.env.BASE_URL}login`}
               className="px-5 py-2 text-sm font-semibold text-primary-foreground border border-primary-foreground/30 rounded-md hover:bg-white/10 transition-colors"
             >
               Log In
             </a>
             <a
-              href="/signup"
+              href={`${import.meta.env.BASE_URL}signup`}
               className="px-5 py-2 text-sm font-bold bg-primary-foreground text-primary rounded-md hover:bg-white transition-colors"
             >
               Sign Up
@@ -133,7 +133,7 @@ const About = () => {
             © 2026 Pyro Press Publication
           </span>
           <a
-            href="/"
+            href={import.meta.env.BASE_URL}
             className="text-sm text-primary-foreground/40 hover:text-primary-foreground/60 transition-colors font-body"
           >
             Home

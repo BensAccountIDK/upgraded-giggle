@@ -20,7 +20,7 @@ const GuestFooter = () => {
               <span className="font-semibold text-[#f8f4f2]">Guest</span>
             </div>
             <a
-              href="/"
+              href={import.meta.env.BASE_URL}
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-white/10 hover:bg-white/15 text-[#f8f4f2] text-sm font-semibold transition-colors"
             >
               <span className="material-symbols-outlined text-sm">login</span>
@@ -34,7 +34,7 @@ const GuestFooter = () => {
             © {new Date().getFullYear()} Pyro Press Publication. All rights reserved.
           </p>
           <div className="flex items-center gap-6 text-xs text-[#f8f4f2]/50">
-            <a href="/about" className="hover:text-[#f8f4f2] transition-colors">About</a>
+            <a href={`${import.meta.env.BASE_URL}about`} className="hover:text-[#f8f4f2] transition-colors">About</a>
             <a href="#" className="hover:text-[#f8f4f2] transition-colors">Archive</a>
             <a href="#" className="hover:text-[#f8f4f2] transition-colors">Contact</a>
           </div>

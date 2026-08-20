@@ -9,7 +9,7 @@ const Landing = () => {
           </span>
           <div className="flex items-center gap-4">
             <a
-              href="/about"
+              href={`${import.meta.env.BASE_URL}about`}
               className="w-10 h-10 rounded-full border border-primary-foreground/20 flex items-center justify-center text-primary-foreground/70 hover:text-primary-foreground hover:border-primary-foreground/40 transition-colors"
               aria-label="About"
             >
@@ -17,31 +17,31 @@ const Landing = () => {
             </a>
             {/* TEMPORARY: Sudo login buttons — remove when real auth is implemented */}
             <button
-              onClick={() => { localStorage.setItem('sudo-role', 'guest'); window.location.href = '/dashboard/guest'; }}
+              onClick={() => { localStorage.setItem('sudo-role', 'guest'); window.location.href = `${import.meta.env.BASE_URL}dashboard/guest`; }}
               className="px-4 py-2 text-xs font-semibold text-primary-foreground border border-primary-foreground/20 rounded-md hover:bg-white/10 transition-colors"
             >
               Guest
             </button>
             <button
-              onClick={() => { localStorage.setItem('sudo-role', 'staff'); window.location.href = '/dashboard/staff'; }}
+              onClick={() => { localStorage.setItem('sudo-role', 'staff'); window.location.href = `${import.meta.env.BASE_URL}dashboard/staff`; }}
               className="px-4 py-2 text-xs font-semibold text-primary-foreground border border-primary-foreground/20 rounded-md hover:bg-white/10 transition-colors"
             >
               Staff
             </button>
             <button
-              onClick={() => { localStorage.setItem('sudo-role', 'spa'); window.location.href = '/dashboard/spa'; }}
+              onClick={() => { localStorage.setItem('sudo-role', 'spa'); window.location.href = `${import.meta.env.BASE_URL}dashboard/spa`; }}
               className="px-4 py-2 text-xs font-semibold text-primary-foreground border border-primary-foreground/20 rounded-md hover:bg-white/10 transition-colors"
             >
               SPA
             </button>
             <a
-              href="/login"
+              href={`${import.meta.env.BASE_URL}login`}
               className="px-5 py-2 text-sm font-semibold text-primary-foreground border border-primary-foreground/30 rounded-md hover:bg-white/10 transition-colors"
             >
               Log In
             </a>
             <a
-              href="/signup"
+              href={`${import.meta.env.BASE_URL}signup`}
               className="px-5 py-2 text-sm font-bold bg-primary-foreground text-primary rounded-md hover:bg-white transition-colors"
             >
               Sign Up
@@ -64,13 +64,13 @@ const Landing = () => {
         </p>
         <div className="flex gap-4 mt-4">
           <a
-            href="/signup"
+            href={`${import.meta.env.BASE_URL}signup`}
             className="px-8 py-3 text-sm font-bold bg-primary-foreground text-primary rounded-md hover:bg-white transition-colors"
           >
             Get Started
           </a>
           <a
-            href="/about"
+            href={`${import.meta.env.BASE_URL}about`}
             className="px-8 py-3 text-sm font-semibold text-primary-foreground border border-primary-foreground/30 rounded-md hover:bg-white/10 transition-colors"
           >
             Learn More
@@ -128,7 +128,7 @@ const Landing = () => {
             © 2026 Pyro Press Publication
           </span>
           <a
-            href="/about"
+            href={`${import.meta.env.BASE_URL}about`}
             className="text-sm text-primary-foreground/40 hover:text-primary-foreground/60 transition-colors font-body"
           >
             About

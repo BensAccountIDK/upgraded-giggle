@@ -13,7 +13,7 @@ const GuestTopNav = () => {
             />
           </div>
           <a
-            href="/login"
+            href={`${import.meta.env.BASE_URL}login`}
             className="px-4 sm:px-5 py-2 text-xs sm:text-sm font-bold text-primary border border-primary/30 rounded-md hover:bg-primary hover:text-primary-foreground transition-colors"
           >
             Log In
